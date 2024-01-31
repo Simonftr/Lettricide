@@ -1,0 +1,85 @@
+﻿<Window
+    x:Class="SAE1._01.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:SAE1._01"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="FenetrePrincipale"
+    Title="Lettricide"
+    Width="800"
+    Height="450"
+    FocusManager.FocusedElement="{Binding ElementName=myCanvas}"
+    Icon="/icon.png"
+    KeyUp="CanvasKeyIsUp"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d" Closing="FenetrePrincipale_Closing">
+    <Canvas
+        Name="myCanvas"
+        Background="Black"
+        Focusable="True">
+        <Label
+            Name="vieRestante"
+            Panel.ZIndex="1"
+            FontWeight="Bold"
+            Foreground="White" FontSize="32" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top">
+            Vies Restantes :
+        </Label>
+        <Rectangle
+            Name="joueur"
+            Canvas.Left="368"
+            Canvas.Top="238"
+            Width="64"
+            Height="112"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Panel.ZIndex="1"
+            Fill="White"
+            Tag="joueur0" />
+        <Label
+            x:Name="score"
+            Panel.ZIndex="1"
+            Height="75"
+            Content="0"
+            FontWeight="ExtraBold"
+            Foreground="White" FontSize="75" Opacity="0.25" Canvas.Left="362" Canvas.Top="10" Padding="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle
+            x:Name="fond"
+            Canvas.Left="0"
+            Canvas.Top="0"
+            Width="800"
+            Height="450"
+            Stroke="Black"
+            Tag="fond" />
+        <Rectangle
+            x:Name="lettreJoueur"
+            Canvas.Left="368"
+            Canvas.Top="161"
+            Width="64"
+            Height="64" />
+        <Rectangle
+            x:Name="flamme"
+            Canvas.Left="342"
+            Canvas.Top="249"
+            Width="60"
+            Height="60"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Panel.ZIndex="1"
+            Fill="#FFFF0808"
+            Tag="flamme0" />
+        <Rectangle
+            x:Name="flamme_Copy"
+            Canvas.Left="399"
+            Canvas.Top="251"
+            Width="60"
+            Height="60"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Panel.ZIndex="1"
+            Fill="#FFFF0808"
+            Tag="flamme0" />
+        <Rectangle x:Name="solHerbe" Height="110" Width="800" Canvas.Left="0" Canvas.Top="340" Panel.ZIndex="1" />
+        <Grid Height="450" Width="800"/>
+    </Canvas>
+</Window>

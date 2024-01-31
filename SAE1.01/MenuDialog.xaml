@@ -1,0 +1,60 @@
+﻿<Window
+    x:Class="SAE1._01.MenuDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:SAE1._01"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Menu"
+    Width="500"
+    Height="500"
+    WindowStyle="None"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d" Icon="/icon.png" ResizeMode="NoResize" BorderBrush="Black" BorderThickness="5">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/fond.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Button x:Name="jouerBouton"
+            Width="144"
+            Height="48"
+            Margin="75,0,0,40"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Click="Button_Click_Jouer"
+            Content="" MouseEnter="jouerBouton_MouseEnter" MouseLeave="jouerBouton_MouseLeave"  />
+
+        <Button x:Name="quitterBouton"
+            Width="144"
+            Height="48"
+            Margin="0,0,75,40"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Click="Button_Click_Quitter"
+            Content="" MouseEnter="quitterBouton_MouseEnter" MouseLeave="quitterBouton_MouseLeave" Cursor="Hand" />
+        <Button x:Name="modeArcadeBouton" Width="144" Height="48" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Click="modeArcadeBouton_Click" Margin="0,0,0,200"/>
+        <Button x:Name="modeNormalBouton" Width="144" Height="48" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Click="modeNormalBouton_Click" Margin="0,0,0,50"/>
+        <Button x:Name="modeDifficileBouton" Width="144" Height="48" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Click="modeDifficileBouton_Click" Margin="0,100,0,0" Cursor="Hand"/>
+        <Button x:Name="optionBouton" Content="" Width="144" Height="48" HorizontalAlignment="Right" Margin="0,25,25,0" VerticalAlignment="Top" MouseEnter="optionBouton_MouseEnter" MouseLeave="optionBouton_MouseLeave" Click="optionBouton_Click"/>
+    </Grid>
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" BorderThickness="0" BorderBrush="Transparent" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Transparent"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+</Window>
